@@ -4,3 +4,8 @@
 # 　　　　→あまり人数が多いと店に入れないので、
 # 　　　　　10人前後の参加者をランダムに２組に分けたい
 
+require 'pp'
+a = [1,2,3,4,5,6,7,8,9,10]
+b = Array.new
+a.sort_by{rand}.each_slice(a.size/2).map{|m|b<<m}
+pp b
