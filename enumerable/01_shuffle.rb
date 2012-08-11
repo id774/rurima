@@ -7,5 +7,7 @@
 require 'pp'
 a = [1,2,3,4,5,6,7,8,9,10]
 b = Array.new
-a.sort_by{rand}.each_slice(a.size/2).map{|m|b<<m}
+c = a.shuffle.take(a.size/2)
+b = a - c
 pp b
+pp c
