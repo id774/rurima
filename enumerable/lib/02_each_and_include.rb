@@ -1,5 +1,4 @@
-# Somemodel.conditions => Array or nil
-# target => given parameter (must be symbol)
+# -*- coding: utf-8 -*-
 
 require 'active_record'
 
