@@ -7,7 +7,7 @@ require 'rubygems'
 require 'rspec'
 require '01_shuffle'
 
-describe Rurima_01, 'テーマ：与えられた配列を適当に並べ替えて２分割してください。' do
+describe Rurima_01, '与えられた配列を適当に並べ替えて２分割してください。' do
   before do
     class Rurima_01
       class << self
