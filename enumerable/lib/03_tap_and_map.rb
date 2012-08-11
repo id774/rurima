@@ -1,7 +1,19 @@
-# @option is parsed query parameter
-# e.g. { 'foo' => 'bar', 'hoge' => 'piyo'
+# -*- coding: utf-8 -*-
 
-require 'pp'
-@option = { 'FOO' => 'BAR', 'HOGE' => 'PIYO'}
-h = {}
-pp @option.map{|k,v|[k.to_s.downcase,v]}.each_with_object(h){|(k,v),h|h[k]=v}
+class Rurima_03
+  class << self
+    def original(option)
+      {}.tap do |hash|
+        option.map do |k,v|
+          hash[k.to_s.downcase(:lower)] = v
+        end
+      end
+    end
+
+    def improvement(options)
+      options.keys.each_with_object({}){|k,h|
+        h[k.to_s.downcase] = options[k]
+      }
+    end
+  end
+end
