@@ -7,9 +7,9 @@ require 'rubygems'
 require 'rspec'
 require '01_shuffle'
 
-describe Rurima, 'テーマ：与えられた配列を適当に並べ替えて２分割してください。' do
+describe Rurima_01, 'テーマ：与えられた配列を適当に並べ替えて２分割してください。' do
   before do
-    class Rurima
+    class Rurima_01
       class << self
         def randomize(array)
           array
@@ -22,7 +22,7 @@ describe Rurima, 'テーマ：与えられた配列を適当に並べ替えて�
     it '10 人の参加者が 2 つに分割された配列が返る' do
       expect = [[0, 1, 2, 3, 4], [5, 6, 7, 8, 9]]
       members = 10.times.to_a
-      Rurima.member_shuffle(members).should == expect
+      Rurima_01.member_shuffle(members).should == expect
     end
   end
 
@@ -30,7 +30,7 @@ describe Rurima, 'テーマ：与えられた配列を適当に並べ替えて�
     it '11 人の参加者が 2 つに分割された配列が返る' do
       expect = [[0, 1, 2, 3, 4], [5, 6, 7, 8, 9, 10]]
       members = 11.times.to_a
-      Rurima.member_shuffle(members).should == expect
+      Rurima_01.member_shuffle(members).should == expect
     end
   end
 end

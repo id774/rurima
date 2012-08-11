@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-class Rurima
+class Rurima_01
   class << self
     def randomize(array)
       array.shuffle
